@@ -1,20 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<app-kheader [title]="headerTitle"></app-kheader>
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <div>
+        Your word is a lamp to my feet and a light to my path.
+      </div>
+      <div class="ref">
+        - Psalms 119:105
+      </div>
+    </div>
+    <div class="data">
+      <div class="note">
+        <strong>
+          This app was developed to provide notes for {{gradeTitle}}
+          students
+        </strong>
+      </div>
+      <ul>
+        <li>
+          This app is divided into lessons which is again divided into notes and
+          Quiz.
+        </li>
+        <li>
+          The memory verses written are from NKJV version.
+        </li>
+        <li>
+          The students can refer to other versions like NIV.
+        </li>
+        <li>
+          For feedback kindly send mail to kjwork120@gmail.com
+        </li>
+      </ul>
+    </div>
+    <!-- <button class="btn" (click)="showTheme = !showTheme">{{showTheme ? 'Hide Themes' : 'Show Themes'}}</button>
+    <div class="theme" *ngIf="showTheme">
+      Select Theme: <br>
+      <div class="setStyle" (click)="changeStyle('#5260ff')" [style.background-color]="'#5260ff'">Blue</div>
+      <div class="setStyle" (click)="changeStyle('#3880ff')" [style.background-color]="'#3880ff'">Primary</div>
+      <div class="setStyle" (click)="changeStyle('gray')" [style.background-color]="'gray'">Gray</div>
+      <br>
+      <div class="setStyle" (click)="changeStyle('maroon')" [style.background-color]="'maroon'">Warning</div>
+      <div class="setStyle" (click)="changeStyle('black')" [style.background-color]="'black'">Black</div>
+      <div class="setStyle" (click)="changeStyle('darkolivegreen')" [style.background-color]="'darkolivegreen'">Success
+      </div>
+      <br>
+      <div class="setStyle" (click)="changeStyle('MIDNIGHTBLUE')" [style.background-color]="'MIDNIGHTBLUE'">Midnight
+        blue</div>
+    </div> -->
   </div>
 </ion-content>

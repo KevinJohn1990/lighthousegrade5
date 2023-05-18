@@ -1,0 +1,43 @@
+<app-kheader-back [title]="headerTitle"></app-kheader-back>
+
+<ion-content>
+  <div class="container">    
+    <app-ksearch [placeholder]="'Search by Note No - eg: type no and hit enter'" (keyenter)="getNotes($event,1, 5)" [searchText]="searchText"></app-ksearch>
+
+    <div class="spinner" *ngIf="isLoading">
+      <ion-spinner></ion-spinner>
+    </div>
+    <div class="data" *ngIf="!isLoading && !notes">
+      No notes available for this chapter ...
+    </div>
+    <div class="">
+      <button *ngIf="isAuth" (click)="AddNote()">Add note</button>
+      <button *ngIf="isAuth" (click)="bShowEditOption = !bShowEditOption">Show Edit Option</button>
+      <button *ngIf="isAuth" (click)="showNoteInText()">Show As Text</button>
+      <button class="showAnswer btn" (click)="toggleShow()">
+        {{ bShowHideAnswer ? "Hide Answers" : "Show Answers" }}
+      </button>
+    </div>
+    <div class="data" *ngIf="!isLoading && notes">
+      <div class="note" *ngFor="let note of notes; let i = index">
+        <div class="question" (click)="note.bShowAnswer = !note.bShowAnswer">
+          <span>{{ note.id }}. </span> {{ note.question }}
+        </div>
+        <div class="answer" style="white-space: pre-wrap;" *ngIf="note.bShowAnswer">- {{ note.answer }}</div>
+        <button *ngIf="isAuth && bShowEditOption" class="btn"
+          [routerLink]="['/', 'notes-list', 'save-note', note.chapterKey, note.key]">
+          Edit note
+        </button>
+      </div>
+    </div>
+    <app-knav [style.display]="bShowPagination && !isLoading ? 'block': 'none'" [interval]="pageInterval"
+      [total]="total" (NavAction)="navOutput($event)">
+    </app-knav>
+    <div class="btn" *ngIf="!isLoading && notes">
+      <button (click)="OpenQuiz()" class="quizReady">Ready for Quiz?</button>
+    </div>
+    <div class="text" *ngIf="isAuth && bShowAsText">
+      <textarea>{{notesData}}</textarea>
+    </div>
+  </div>
+</ion-content>

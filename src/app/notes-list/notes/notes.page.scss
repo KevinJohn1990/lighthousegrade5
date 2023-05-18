@@ -1,0 +1,65 @@
+div.container {
+    margin: 5px auto;
+    max-width: 600px;
+}
+div.spinner{
+  text-align: center;
+}
+div {
+  padding: 5px;
+}
+// div.top {
+//   // display: inline-block;
+//   // text-align: center;
+//   border: 1px solid var(--ion-color-tertiary);
+//   margin-bottom: 10px;
+//   padding: 0px;
+// }
+div.showAnswer {
+  padding: 10px;
+  border: 1px solid var(--ion-color-tertiary);;
+  color: white;
+  background-color: var(--ion-color-tertiary);
+}
+div.showAnswer:hover{
+  color: var(--ion-color-tertiary);;
+  background-color: white;
+}
+div.note {
+  margin-bottom: 5px;
+  border: 1px solid silver;
+  box-shadow: 1px 1px 10px var(--var-color-boxshadow);
+}
+div.answer,
+span {
+  color: var(--ion-color-tertiary);
+  font-weight: bold;
+}
+button{
+  margin: 5px;
+}
+button.quizReady{
+  border-radius: 20px;
+  margin-bottom: 5px;
+  color: var(--ion-color-tertiary);
+  background-color: white;
+  border: 1px solid;
+}
+button.quizReady:hover{
+  background-color: var(--ion-color-tertiary);
+  color: white;
+}
+
+div.text{
+  width: 100%;  
+}
+.text > textarea{
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+
+// .btn{
+//   // align-items: center;
+//   text-align: center;
+// }
