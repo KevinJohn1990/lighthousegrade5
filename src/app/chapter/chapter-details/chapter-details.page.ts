@@ -91,12 +91,14 @@ export class ChapterDetailsPage {
   addTextBookContent() {
     this.cancelTextContent();
     this.bShowTextEdit = true;
+    this.titleHeaderText = 'Add new title and content';
   }
   editTextBookContent(text: TextBookViewModel) {
     this.textKey = text.key;
     this.textContent = text.content;
     this.textTitle = text.title;
     this.bShowTextEdit = true;
+    this.titleHeaderText = 'Edit the title and content';
   }
 
   cancelTextContent() {

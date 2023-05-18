@@ -26,12 +26,13 @@
           *ngIf="chapter"
           [routerLink]="['/', 'notes-list', 'notes', chapter.key]"
         >
-          Open notes
+          <ion-icon name="open-outline"></ion-icon> Open notes
         </button>
         <button
           *ngIf="isAuth && chapter"
           [routerLink]="['/', 'chapter', 'save-chapter', chapter.key]"
         >
+          <ion-icon name="create-outline"></ion-icon>
           Edit chapter
         </button>
       </div>
@@ -48,10 +49,10 @@
       >
         <span class="title title-1">Text book</span>
         <ng-container *ngIf="isAuth && chapter">
-          <span class="icon">
+          <span class="btnIcon">
             <ion-icon
               (click)="addTextBookContent()"
-              name="create-outline"
+              name="add-circle-outline"
             ></ion-icon>
           </span>
         </ng-container>
@@ -67,7 +68,7 @@
         style="border: 1px solid silver; border-radius: 5px"
       >
         <h3>{{titleHeaderText}}</h3>
-        <div class="form-group">
+        <div class="form-group" style="display: none">
           <label for="">Key: {{textKey}}</label>
         </div>
         <div class="form-group">
@@ -88,8 +89,12 @@
             placeholder="Enter content here"
           ></textarea>
         </div>
-        <button (click)="saveTextContent()">Save</button>
-        <button (click)="cancelTextContent()">Cancel</button>
+        <button (click)="saveTextContent()">
+          <ion-icon name="save-outline"></ion-icon> Save
+        </button>
+        <button (click)="cancelTextContent()">
+          <ion-icon name="close-circle-outline"></ion-icon> Cancel
+        </button>
       </div>
 
       <div
@@ -101,13 +106,13 @@
             <div class="group">
               <div class="label">
                 {{text.title}}
-                <button
+                <span
+                  class="btnIcon"
                   *ngIf="isAuth && chapter"
                   (click)="editTextBookContent(text)"
-                  style="margin-left: 10px"
                 >
-                  Edit
-                </button>
+                  <ion-icon name="create-outline"></ion-icon>
+                </span>
               </div>
               <div class="summary">{{text.content}}</div>
             </div>
