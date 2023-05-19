@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target":"grade5",
     "public": "www",
     "ignore": [
       "firebase.json",

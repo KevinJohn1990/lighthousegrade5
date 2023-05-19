@@ -1,5 +1,19 @@
 {
   "projects": {
     "default": "lighthouseapp-39e9d"
+  },
+  "targets": {
+    "lighthouseapp-39e9d": {
+      "hosting": {
+        "grade5": [
+          "lighthouse-grade5"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "hosting": {
+    "target": "grade5",
+    "public": "www"
   }
 }

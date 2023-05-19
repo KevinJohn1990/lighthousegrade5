@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "short_name": "app",
+  "name": "Lighthouse Grade5 App",
+  "short_name": "Lighthouse Grade5",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
